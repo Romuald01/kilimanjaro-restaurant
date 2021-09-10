@@ -1,0 +1,69 @@
+.btn{
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-align-items: center;
+    align-items: center;
+    position: relative;
+    border: 2px solid #dc042a;
+    font-size: 13px;
+    text-transform: uppercase;
+    padding: 8px 16px;
+    background-color: #dc042a;
+    cursor: pointer;
+}
+.btn:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    -webkit-transform-origin: 100% 0;
+    transform-origin: 100% 0;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transition: -webkit-transform .4s;
+    transition: -webkit-transform .4s;
+    transition: transform .4s;
+    transition: transform .4s,-webkit-transform .4s;
+}
+.btn:hover:before {
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+}
+
+.btn>.text {
+    position: relative;
+    color: #fff;
+    background-image: -webkit-linear-gradient(left,#dc042a,#dc042a 50%,#fff 0,#fff);
+    background-image: linear-gradient(
+90deg
+,#dc042a,#dc042a 50%,#fff 0,#fff);
+    background-repeat: repeat;
+    background-size: 200%;
+    background-position: 100% 0;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-transition: background-position .4s;
+    transition: background-position .4s;
+}
+button {
+    overflow: visible;
+}
+.text{
+    color:#fff;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 19.5px;
+}
+
+.btn:hover .text {
+    color: #dc042a !important;
+    font-weight: 400;
+}
